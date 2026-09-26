@@ -1,15 +1,19 @@
 <! DOCTYPE html>
 <html lang="rw">
 <head>
-<meta charset=UTF-8">
+<meta charset="UTF-8">
 <titre>Urumuri AI </titre>
 </head>
 <body>
 <h1>☀️ Murakaza neza kuri Urumuri AI</h1>
-<p> Urumuri AI ni urubuga rukorana nubwenge buhangano.</p>
+<p> Urumuri AI ni urubuga rukorana nubwenge buhangano.
+</p>
 <h2> Ibice bya Urumuri AI</h2>
 <ul> 
-<li> education-gufasha Abararimu na banyeshuri
-<li> ubucuruzi-gufasha mubucuruzi 
-<li> Ubuvuzi-gufasha gutanga Inama rusange kubuzima 
+<li> education-gufasha Abararimu na banyeshuri</li>
+<li> ubucuruzi-gufasha mubucuruzi </li>
+<li> Ubuvuzi-gufasha gutanga Inama kubuzima </li>
+</ul>
+</body>
+</html>
 
