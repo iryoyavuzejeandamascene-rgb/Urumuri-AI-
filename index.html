@@ -7,7 +7,207 @@
 <body>
 <h1>☀️murakaza neza kuri Urumuri AI</h1>
 <p>
-Urumuri AI ni urubuga rukorana nubwenge buhangano.
+Urumuri AI ni <!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urumuri AI</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#080d40,#32106b,#0759a8);
+color: white;
+min-height: 100vh;
+}
+
+header {
+text-align: center;
+padding: 35px 15px;
+}
+
+.logo {
+font-size: 65px;
+}
+
+h1 {
+font-size: 35px;
+color: #ffd700;
+margin: 5px;
+}
+
+header p {
+font-size: 16px;
+}
+
+.container {
+max-width: 650px;
+margin: auto;
+padding: 15px;
+}
+
+.welcome {
+text-align: center;
+padding: 20px;
+}
+
+.welcome h2 {
+color: #ffd700;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 10px;
+margin: 20px 0;
+}
+
+.card {
+background: rgba(255,255,255,0.12);
+padding: 15px 5px;
+border-radius: 15px;
+text-align: center;
+border: 1px solid #a98cff;
+}
+
+.card span {
+font-size: 28px;
+}
+
+.card h3 {
+font-size: 13px;
+}
+
+.chat {
+background: white;
+color: #222;
+border-radius: 18px;
+padding: 18px;
+margin-top: 25px;
+}
+
+.chat h2 {
+color: #32106b;
+text-align: center;
+}
+
+#answer {
+background: #f0edff;
+padding: 15px;
+border-radius: 12px;
+min-height: 65px;
+margin-bottom: 15px;
+}
+
+textarea {
+width: 100%;
+height: 85px;
+padding: 12px;
+border: 2px solid #7652ce;
+border-radius: 12px;
+font-size: 16px;
+}
+
+button {
+width: 100%;
+padding: 14px;
+margin-top: 12px;
+border: none;
+border-radius: 12px;
+background: linear-gradient(90deg,#5924bb,#0879e8);
+color: white;
+font-size: 17px;
+font-weight: bold;
+}
+
+footer {
+text-align: center;
+padding: 30px 10px;
+color: #ffd700;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">☀️</div>
+<h1>URUMURI AI</h1>
+<p>Urumuri rw'ubumenyi, igisubizo cy'ibibazo byawe.</p>
+</header>
+
+<div class="container">
+
+<div class="welcome">
+<h2>Murakaza neza!</h2>
+<p>Ni iki wifuza kumenya uyu munsi?</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<span>📚</span>
+<h3>EDUCATION</h3>
+</div>
+
+<div class="card">
+<span>💼</span>
+<h3>UBUCURUZI</h3>
+</div>
+
+<div class="card">
+<span>🩺</span>
+<h3>UBUVUZI</h3>
+</div>
+
+</div>
+
+<div class="chat">
+<h2>🤖 Ganira na Urumuri AI</h2>
+
+<div id="answer">
+Muraho! Andika ikibazo cyawe hano.
+</div>
+
+<textarea id="question"
+placeholder="Andika ikibazo cyawe hano...">
+</textarea>
+
+<button onclick="sendMessage()">
+OHEREZA ➤
+</button>
+
+</div>
+</div>
+
+<footer>
+☀️ Urumuri AI - Twese hamwe twubaka ejo heza!
+</footer>
+
+<script>
+function sendMessage() {
+let q = document.getElementById("question").value;
+
+if(q.trim() === "") {
+alert("Banza wandike ikibazo cyawe.");
+return;
+}
+
+document.getElementById("answer").innerText =
+"Murakoze kubaza Urumuri AI! Uruganiriro rurateguwe. Turimo gutegura uburyo bwo kuruhuza na AI kugira ngo rutange ibisubizo.";
+
+document.getElementById("question").value = "";
+}
+</script>
+
+</body>
+</html> rukorana nubwenge buhangano.
 </p>
 <h2>ibice bya Urumuri AI</h2>
 <ul> 
