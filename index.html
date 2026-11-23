@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="rw">
+<!DOCTYPE html><html lang="rw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Urumuri AI - Ubumenyi mu burezi, ubucuruzi n'ubuvuzi.">
-<title>Urumuri AI</title>
-
-<style>
+<title>Urumuri AI</title><style>
 * {
   box-sizing: border-box;
 }
@@ -154,80 +151,55 @@ footer {
     font-size: 11px;
   }
 }
-</style>
-</head>
-
-<body>
-
-<header>
+</style></head><body><header>
   <div class="logo">☀️</div>
   <h1>URUMURI AI</h1>
   <p>Urumuri rw'ubumenyi, igisubizo cy'ibibazo byawe.</p>
-</header>
-
-<div class="container">
-
-  <div class="welcome">
+</header><div class="container">  <div class="welcome">
     <h2>Murakaza neza kuri Urumuri AI!</h2>
     <p>Ni iki wifuza kumenya cyangwa kuganiraho uyu munsi?</p>
-  </div>
+  </div>  <div class="cards"><div class="card" onclick="selectCategory('EDUCATION',this)">
+  <span>📚</span>
+  <h3>EDUCATION</h3>
+</div>
 
-  <div class="cards">
+<div class="card" onclick="selectCategory('UBUCURUZI',this)">
+  <span>💼</span>
+  <h3>UBUCURUZI</h3>
+</div>
 
-    <div class="card" onclick="selectCategory('EDUCATION',this)">
-      <span>📚</span>
-      <h3>EDUCATION</h3>
-    </div>
+<div class="card" onclick="selectCategory('UBUVUZI',this)">
+  <span>🩺</span>
+  <h3>UBUVUZI</h3>
+</div>
 
-    <div class="card" onclick="selectCategory('UBUCURUZI',this)">
-      <span>💼</span>
-      <h3>UBUCURUZI</h3>
-    </div>
+  </div>  <div class="chat"><h2>🤖 Ganira na Urumuri AI</h2>
 
-    <div class="card" onclick="selectCategory('UBUVUZI',this)">
-      <span>🩺</span>
-      <h3>UBUVUZI</h3>
-    </div>
+<div id="answer">
 
-  </div>
-
-  <div class="chat">
-
-    <h2>🤖 Ganira na Urumuri AI</h2>
-
-    <div id="answer">
 Muraho neza!
 
 Ndi Urumuri AI.
 
 Hitamo igice wifuza cyangwa wandike ikibazo cyawe hano.
-    </div>
-
-    <textarea
-      id="question"
-      maxlength="5000"
-      placeholder="Andika ikibazo cyawe hano..."
-    ></textarea>
-
-    <button id="sendButton" onclick="sendMessage()">
-      OHEREZA ➤
-    </button>
-
-  </div>
-
 </div>
 
-<footer>
+<textarea
+  id="question"
+  maxlength="5000"
+  placeholder="Andika ikibazo cyawe hano..."
+></textarea>
+
+<button id="sendButton" onclick="sendMessage()">
+  OHEREZA ➤
+</button>
+
+  </div></div><footer>
   ☀️ URUMURI AI
-
   <p>Twese hamwe twubaka ejo heza!</p>
-
   <p>© 2026 Urumuri AI. All Rights Reserved.</p>
-</footer>
+</footer><script>
 
-<script>
-
-// AHA TUZASHYIRAMO LINK YA CLOUDFLARE WORKER
 const API_URL = "SHYIRAMO_LINK_YA_WORKER_HANO";
 
 let selectedCategory = "";
@@ -262,13 +234,16 @@ async function sendMessage() {
   }
 
   if (API_URL === "SHYIRAMO_LINK_YA_WORKER_HANO") {
-    answer.innerText = "Urumuri AI iracyategurwa. Link ya serivisi ntirashyirwamo.";
+    answer.innerText =
+      "Urumuri AI irategereje guhuza na serivisi yayo. Ongera ugerageze nyuma.";
     return;
   }
 
   button.disabled = true;
   button.innerText = "TEGEREZA...";
-  answer.innerText = "Urumuri AI irimo gutekereza ku kibazo cyawe...";
+
+  answer.innerText =
+    "Urumuri AI irimo gutekereza ku kibazo cyawe...";
 
   try {
 
@@ -287,6 +262,10 @@ async function sendMessage() {
 
     if (!response.ok) {
       throw new Error(data.error || "Habaye ikibazo.");
+    }
+
+    if (!data.answer) {
+      throw new Error("Nta gisubizo cyagarutse.");
     }
 
     answer.innerText = data.answer;
@@ -310,8 +289,13 @@ async function sendMessage() {
 }
 
 document.getElementById("question").addEventListener("keydown", function(event) {
+
   if (event.key === "Enter" && !event.shiftKey) {
     event.preventDefault();
     sendMessage();
-</body>
+  }
+
+});
+
+</script></body>
 </html>
